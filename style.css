@@ -73,17 +73,37 @@ body{
     width: 80%;
     margin-left:10%;
     background: white;
-    min-height:30vh;
+    height:31vh;
     margin-bottom: 7%;
+    overflow-y: scroll;
 }
 table{
+    height: 31vh;
     font-size: 13px;
     font-style: italic;
     width:100%;
     border-collapse: collapse;
     text-align: center;
-    overflow-x: auto;
 }
 table tr{
-    border-bottom:1px solid #ff4d4d;
+    border:1px solid #ff4d4d;
+    font-weight: normal;
 }
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
