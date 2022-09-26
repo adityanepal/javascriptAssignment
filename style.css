@@ -38,6 +38,12 @@ body{
     transition: border-color 0.2s;
     font-style: italic;
 }
+.toDoBox input::selection {
+    background: #FFF; /* WebKit/Blink Browsers */
+  }
+.toDoBox input::-moz-selection {
+    background: #FFF; /* Gecko Browsers */
+}
 .toDoBox input:hover{
     border-bottom: 4px solid #ff4d4d;
     transition: border-bottom 0.2s;
@@ -106,4 +112,70 @@ table tr{
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
+  }
+  ul{
+    width: 95.5%;
+    height:100%;
+  }
+  /* Style the list items */
+  ul li {
+    width: 99%;
+    padding:0.5%;
+    cursor: pointer;
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    margin-left:-20px;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #f44336;
+    color: #fff;
+    text-decoration:none;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
   }
