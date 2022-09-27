@@ -6,37 +6,32 @@
 </title>
 <link rel="stylesheet" href="style.css" type="text/css">
 <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5JnUbwQdk0cmUmHee60MUQ-pt55D1ql4PbjwklgY&s" type="image/icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="toDoMain">
         <div class="toDoTitle">
             <h2>TO-DO APP</h2>
-        </div>
+        </div> 
         <div class="toDoBox">
-            <form>
-                <input id="stitle" name="stitle" placeholder="Enter Your Task Title" ><br>
-                <input id="stitle" name="sdesc" placeholder="Enter Your Task Description" ><br>
-                <button class="button1" id="ssubmit" name="ssubmit">Submit</button>
+            <form id="myForm">
+                <input type="file" id="csvFile" accept=".csv"/>
+                <p>Note:If you want to import CSV File.</p>
             </form>
+                <input id="stitle" name="stitle" placeholder="Enter Your Task Title" ><br>
+                <input id="sdesc" name="sdesc" placeholder="Enter Your Task Description" ><br>
+                <button class="button1" id="ssubmit" name="ssubmit">Submit</button>
         </div>
         <p style="margin-left:10%;color:black;">Note: Your List Goes Here!!!!!!</p>
         <div class="toDoData">
-            <table>
-                <tr>
-                  <th style="font-size: 18px;">Note Title</th>
-                  <th style="font-size: 18px;">Note Description</th>
-                  <th style="font-size: 18px;">Action</th>
-                </tr>
-                <tr>
-                    <th>Note Title</th>
-                    <th>Note Description</th>
-                    <th>Action</th>
-                  </tr>
-              </table>
-              
+                <ul id="notelist">
+                </ul>
         </div>
+        <button class="button1" style="
+        border-top: 2px solid #ff4d4d;background-color: #ff4d4d;" id="ssave" name="ssave">Save Changes</button>
+
     </div>
-    
+       
 </body>
 <footer>
 <script src="script.js"></script>
