@@ -77,6 +77,8 @@ myForm.onchange = function (e) {
       };
         closespan();
       }
+
+  alert("Imported Sucessfully");
   };
   
   reader.readAsText(input);
@@ -111,7 +113,6 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
     id=ev.target.id;
     if(ev.target.classList == "checked"){
-      alert(id)
       a=alldata.filter(data=>data.id === id);
       a[0]['Completed']="yes";
       console.log(a);
@@ -119,7 +120,6 @@ list.addEventListener('click', function(ev) {
       alldata.push(a[0]);
       console.log(alldata);
     }else{
-      alert(id)
       a=alldata.filter(data=>data.id === id);
       a[0]['Completed']="no";
       console.log(a);
@@ -132,9 +132,7 @@ list.addEventListener('click', function(ev) {
     sesdatachange();
   }
   else if(ev.target.id==='buttonEdit'){
-    alert("Hello");
     id=ev.target.parentElement.id;
-    alert(id);
     a=alldata.filter(data=>data.id === id);
     document.getElementById("stitle").value = a[0]['Title'];
     document.getElementById("sdesc").value = a[0]['Description'];
@@ -157,7 +155,6 @@ function newElement() {
       a.id=sid.toString();
     };
       title=document.getElementById("stitle").value
-      alert(title);
       a.Title= document.getElementById("stitle").value;
       a.Description = document.getElementById("sdesc").value;
       a.Completed = "no";
@@ -171,8 +168,8 @@ function newElement() {
         `;
       alldata.push(a);
       closespan();
+      alert("Added Sucessfully");
     }else{
-      alert("edit Code");
       id=eid;
       a=alldata.filter(data=>data.id === id);
       a[0]['Title']= document.getElementById("stitle").value;
@@ -181,6 +178,8 @@ function newElement() {
       alldata.push(a[0]);
       console.log(alldata);
       eid=0;
+
+      alert("Edited Sucessfully");
     }
   }
   document.getElementById("stitle").value = "";
@@ -226,10 +225,8 @@ ssave.addEventListener("click",
       var div = this.parentElement;
       div.style.display = "none";
       alldata=alldata.filter(data=>data.id != div.id);
-      alert(div.id)
       console.log(alldata);
       sessionStorage.removeItem("data");
-      alert(alldata.length);
       if(alldata.length<1){
         alldata=[];
       }else{
