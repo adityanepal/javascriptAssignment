@@ -12,42 +12,26 @@
     <div class="toDoMain">
         <div class="toDoTitle">
             <h2>TO-DO APP</h2>
-        </div>
+        </div> 
         <div class="toDoBox">
-            <form>
-                <input id="stitle" name="stitle" placeholder="Enter Your Task Title" ><br>
-                <input id="stitle" name="sdesc" placeholder="Enter Your Task Description" ><br>
-                <button class="button1" id="ssubmit" name="ssubmit">Submit</button>
+            <form id="myForm">
+                <input type="file" id="csvFile" accept=".csv"/>
+                <p>Note:If you want to import CSV File.</p>
             </form>
+                <input id="stitle" name="stitle" placeholder="Enter Your Task Title" ><br>
+                <input id="sdesc" name="sdesc" placeholder="Enter Your Task Description" ><br>
+                <button class="button1" id="ssubmit" name="ssubmit">Submit</button>
         </div>
         <p style="margin-left:10%;color:black;">Note: Your List Goes Here!!!!!!</p>
         <div class="toDoData">
                 <ul id="notelist">
-                <li class="checked">
-                    <p>Note Title</p>
-                    <p>Note Description</p>
-                    <button class="buttonEdit" id="buttonEdit" name="buttonEdit"><i class="fa fa-edit"></i></button></i>
-                </li>
-                <li>
-                    <p>Note Title</p>
-                    <p>Note Description</p>
-                    <button class="buttonEdit" id="buttonEdit" name="buttonEdit"><i class="fa fa-edit"></i></button></i>
-                </li>
-                <li>
-                        <p>Note Title</p>
-                        <p>Note Description</p>
-                    <button class="buttonEdit" id="buttonEdit" name="buttonEdit"><i class="fa fa-edit"></i></button></i>
-                </li>
-                <li>
-                    <p>Note Title</p>
-                    <p>Note Description</p>
-                    <button class="buttonEdit" id="buttonEdit" name="buttonEdit"><i class="fa fa-edit"></i></button></i>
-                </li>
                 </ul>
-              </table>
         </div>
+        <button class="button1" style="
+        border-top: 2px solid #ff4d4d;background-color: #ff4d4d;" id="ssave" name="ssave">Save Changes</button>
+
     </div>
-    
+       
 </body>
 <footer>
 <script src="script.js"></script>
